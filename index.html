@@ -1,0 +1,418 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 5 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+<!-- Should show the name of your company with an image or logo -->
+<!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+<!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+<!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+
+<header class="container-md p-3 my-3 border bg-dark text-white">
+    <div class="row">
+        <h1 class="col-sm-8">Welcome to Stylez</h1>
+    </div>
+    <div class="row">
+        <p>Always leave looking stylish!</p>
+    </div>
+</header>
+
+<section class="jumbotron">
+</section>
+
+
+<!-- inspired by : https://www.w3schools.com/bootstrap4/bootstrap_ref_js_scrollspy.asp -->
+
+<nav class=" navbar navbar-expand-sm bg-dark navbar-dark" style="text-align: center">
+    <ul class="navbar-nav">
+        <li class="nav-item col-sm-3">
+            <a class="nav-link text-white" href="#Service"><img src="https://img.icons8.com/color/48/000000/barbershop.png" alt="logo" style="width:30px;"/>Service Description</a>
+        </li>
+        <li class="nav-item col-sm-3">
+            <a class="nav-link text-white" href="#price"><img src="https://img.icons8.com/color/48/000000/us-dollar--v1.png" alt="logo" style="width:30px;"/> Service Prices</a>
+        </li>
+        <li class="nav-item col-sm-3">
+            <a class="nav-link text-white" href="#Meet our hairdressers"><img src="https://img.icons8.com/color/48/000000/hairdresser.png" alt="logo" style="width:30px;"/>Hairdressers</a>
+        </li>
+        <li class="nav-item col-sm-3">
+            <a class="nav-link text-white" href="#Book Appointment"><img src="https://img.icons8.com/color/48/000000/calendar.png" alt="logo" style="width:30px;" />Book an Appointment</a>
+        </li>
+        <li class="nav-item col-sm-3">
+            <a class="nav-link text-white" href="#Payment"><img src="https://img.icons8.com/color/48/000000/bank-card-back-side.png" alt="logo" style="width:30px;" />Payment</a>
+        </li>
+
+    </ul>
+</nav><br><br>
+
+
+
+<!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+<!-- These can be useful for making sure someone reads something before continuing -->
+<div class="container">
+    <h2>ALERT</h2>
+    <p>Due to COVID-19, we are only taking clients with appointments.</p>
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Please read! </strong>You must read.
+    </div>
+</div><br><br>
+
+
+<!-- When you have messages to tell, remember that center align is not always the best choice -->
+<div class="container-md p-3 my-3 border text-white bg-dark">
+    <h2>Let us tell you about our expertise</h2>
+    <p class="expertise">We can cut hair</p>
+    <p class="expertise">We can dye hair</p>
+    <p class="expertise">We can do blowouts</p>
+    <p class="expertise">We can do hair treatments</p>
+</div><br><br>
+
+
+<!-- inspired from https://www.w3schools.com/bootstrap4/bootstrap_navs.asp-->
+
+<div class="container">
+   <h3 id="Service" class="bold"> <img src="https://img.icons8.com/color/48/000000/barbershop.png" alt="logo" style="width:30px;"/> SERVICE DESCRIPTION</h3>
+</div>
+
+<div class="container border bg-secondary text-white">
+    <h4 class=" titles">Haircuts</h4>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-white" data-toggle="tab" href="#description">Description</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#angledBob">Angled Bob</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#texturedHaircut">Textured Haircut</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#mediumOneLenghtHaircut">Medium One Length Haircut</a>
+        </li>
+    </ul>
+
+
+    <!-- All pictures where taken from this site: https://www.hadviser.com/ -->
+    <div class="tab-content">
+        <div id="description" class="container tab-pane active"><br>
+            <h4>Description</h4>
+            <p>We offer a variety of different styles of haircut that can be accustomed to your liking.</p>
+
+        </div>
+        <div id="angledBob" class="container tab-pane fade"><br>
+            <h4>Angled Bob</h4>
+            <p>A beautiful angled cut like the one below happens to be one of the most popular short haircuts for women right now. A warm hair color, dark roots, and the ombre effect are trendy too.</p>
+            <img class="serviceDescription" src="AngledBob.jpg"><br>
+        </div>
+        <div id="texturedHaircut" class="container tab-pane fade"><br>
+            <h4>Textured Haircut</h4>
+            <p>Another great way to take advantage of short bob haircuts without high maintenance is to try a textured look. The quickest way to style a trendy bob is to make it a bit messy and tousled.</p>
+            <img class="serviceDescription" src="TexturedHaircut.jpg">
+        </div>
+        <div id="mediumOneLenghtHaircut" class="container tab-pane fade"><br>
+            <h4>Medium One Length Haircut</h4>
+            <p>Another great way to take advantage of short bob haircuts without high maintenance is to try a textured look. The quickest way to style a trendy bob is to make it a bit messy and tousled.</p>
+            <img class="serviceDescription" src="MediumOneLengthHaircut.jpg">
+        </div>
+    </div>
+</div><br><br>
+
+
+<div class="container border bg-secondary text-white">
+    <h4 class="titles">Hair Dyeing</h4>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-white" data-toggle="tab" href="#description2">Description</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#blonde">Brown Hair with Blonde Highlights</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#bronze">Brown Hair with Bronze Highlights</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#red">Brown Hair with Red Highlights</a>
+        </li>
+    </ul>
+
+
+    <!-- All pictures and descriptions where taken from this site: https://www.hadviser.com/ -->
+    <div class="tab-content">
+        <div id="description2" class="container tab-pane active"><br>
+            <h4>Description</h4>
+            <p>We offer a wide selection of different colors to choose from when it comes to dyeing your hair!</p>
+
+        </div>
+        <div id="blonde" class="container tab-pane fade"><br>
+            <h4>Brown Hair with Blonde Highlights</h4>
+            <p>Bring some color and volume to your light brown hair by playing with cooler and warmer shades of blonde.</p>
+            <img class="serviceDescription" src="BrownHairWithBlondeHighlights.jpg"><br>
+        </div>
+        <div id="bronze" class="container tab-pane fade"><br>
+            <h4>Brown Hair with Bronze Highlights</h4>
+            <p>Try something a little more complex with dustier shades of brown. Added bronze highlights will pop once you curl your hair!</p>
+            <img class="serviceDescription" src="BrownHairWithBronzeHighlights.jpg">
+        </div>
+        <div id="red" class="container tab-pane fade"><br>
+            <h4>Brown Hair with Red Highlights</h4>
+            <p>A stylish combination of brown and red hair for a basic shoulder-length cut. Use this hairstyle to accentuate your natural brown hair.</p>
+            <img class="serviceDescription" src="BrownHairWithRedHighlights.jpg">
+        </div>
+
+    </div>
+</div><br><br>
+
+<div class="container border bg-secondary text-white">
+    <h4 class="titles">Other Services</h4>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-white" data-toggle="tab" href="#blowouts">Blowout</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link text-white" data-toggle="tab" href="#keratin">Keratin Smoothing Treatment</a>
+        </li>
+    </ul>
+
+
+    <!-- All pictures where taken from this site: https://www.hadviser.com/ -->
+    <div class="tab-content">
+
+
+        <div id="blowouts" class="container tab-pane active"><br>
+            <h4>Blowout</h4>
+            <p>A blowout is the art of drying hair after a wash to achieve a smooth and sleek look, style and feel -- no curling or flat iron involved!</p> <!-- Description from https://www.thedrybar.com/what-is-a-blowout#:~:text=In%20its%20simplest%20form%2C%20a,curling%20or%20flat%20iron%20involved! -->
+            <img class="serviceDescription" src="blowout.jpg"><br> <!-- http://thebeautydepartment.com/2016/09/3-faves-for-a-perfect-blowout/ -->
+
+        </div>
+        <div id="keratin" class="container tab-pane fade"><br>
+            <h4>Keratin Smoothing Treatment</h4>
+            <p>A keratin is a smoothing treatment that seals the hair cuticle with a coating of protein that eliminates frizz, and adds softness and shine. The process can take anywhere between 1 and 3 hours depending on hair type, length, and fullness. </p> <!-- https://theouai.com/blogs/by-the-ouai/everything-you-need-to-know-about-keratin-treatments#:~:text=A%20keratin%20is%20a%20smoothing,type%2C%20length%2C%20and%20fullness. -->
+            <img class="serviceDescription" src="keratin.jpg"><br> <!-- https://pinupsalon.biz/perks-coppola-keratin-smoothing-treatment/ -->
+        </div>
+    </div>
+</div><br><br><br><br>
+
+<!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+<!-- Might be (or not) useful to show some information to the user -->
+<div class="container">
+    <h2 id="price"><img src="https://img.icons8.com/color/48/000000/us-dollar--v1.png" alt="logo" style="width:30px;"/> SERVICE PRICES</h2>
+    <p>Here is a list of prices for offered services</p>
+    <table class="table table-dark table-hover">
+        <thead>
+        <tr>
+            <th class="price">Service</th>
+            <th class="price">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Haircut</td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>Blowout</td>
+            <td>$60.00</td>
+        </tr>
+        <tr>
+            <td>Hair Dyeing</td>
+            <td>$120.00</td>
+        </tr>
+        <tr>
+            <td>Keratin Smoothing Treatments</td>
+            <td>$200.00</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div><br><br>
+
+
+
+
+
+<!-- A different approach would be to make the whole staff information collapsible -->
+<!-- Here a block button (taking the full width) opens/closes the collapsible -->
+<!-- Here a single card is used, but card columns could be used -->
+<div class="container">
+    <h2 id="Meet our hairdressers"><img src="https://img.icons8.com/color/48/000000/hairdresser.png" alt="logo" style="width:30px;"/>HAIRDRESSERS</h2>
+    <div class="row">
+        <div class="col">
+        <a href="#hairdresser" class="btn btn-secondary btn-block" data-toggle="collapse">Meet our hairdresser Sebastien!</a>
+            <div id="hairdresser" class="collapse col-6-sm">
+        <div class="card bg-dark " style="width:200px">
+            <img class="card-img-top" src="Sebastien.jpg" alt="Card image" style="width:100%"> <!--https://tazhair.com/people/rino-balzano/ -->
+            <div class="card-body bg-dark ">
+                <h4 class="card-title text-white">Sebastien</h4>
+                <p class="card-text text-white">Sebastien is known for his talented hair-dyeing skills. He obtained his diploma at Sassoon Academy. He's been a part of the Stylez team for 5 years. </p>
+            </div>
+        </div>
+    </div>
+    </div>
+        <div class="col">
+            <a href="#hairdresser2" class="btn btn-secondary btn-block" data-toggle="collapse">Meet our hairdresser Janette!</a>
+    <div id="hairdresser2" class="collapse col-6-sm">
+        <div class="card bg-dark " style="width:200px">
+            <img class="card-img-top" src="Janette.jpg" alt="Card image" style="width:100%"> <!--https://tazhair.com/people/rino-balzano/ -->
+            <div class="card-body bg-dark">
+                <h4 class="card-title text-white">Janette</h4>
+                <p class="card-text text-white">Janette is known for her talented hair cutting skills. She obtained her diploma at Sassoon Academy. She's been a part of the Stylez team for 2 years. </p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+</div><br><br><br><br>
+
+<!-- Collapsible with multiple items - accordion -->
+<!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+<!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+<!-- could work well.  You can use other patterns too.  This is just an example. -->
+
+<!-- map code inspired by https://mdbootstrap.com/docs/jquery/javascript/google-maps/ -->
+<div class="container">
+    <h2 id="Book Appointment"><img src="https://img.icons8.com/color/48/000000/calendar.png" alt="logo" style="width:30px;" />BOOK AN APPOINTMENT</h2>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link text-black" data-toggle="collapse" href="#collapseService">Click here to select a service</a>
+            </div>
+            <div id="collapseService" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <div>
+                        <p class="category"> Please select the desired service(s): </p>
+                        <p>Haircuts:</p>
+                        <input type="checkbox" name="Angled Bob" value="Angled Bob">Angled Bob<br>
+                        <input type="checkbox" name="Texture Haircut" value="Texture Haircut">Texture Haircut<br>
+                        <input type="checkbox" name="Medium One Length Haircut" value="Medium One Length Haircut">Medium One Length Haircut<br><br>
+                        <p>Hair Dye:</p>
+                        <input type="checkbox" name="Brown Hair with Blonde Highlights" value="Brown Hair with Blonde Highlights">Brown Hair with Blonde Highlights<br>
+                        <input type="checkbox" name="Brown Hair with Bronze Highlights" value="Brown Hair with Bronze Highlights">Brown Hair with Bronze Highlights<br>
+                        <input type="checkbox" name="Brown Hair with Blonde Highlights" value="Brown Hair with Red Highlights">Brown Hair with Red Highlights<br><br>
+                        <p>Others:</p>
+                        <input type="checkbox" name="Blow-Out" value="Blow-Out">Blow-Out<br>
+                        <input type="checkbox" name="Keratin Smoothing Treatment" value="Keratin Smoothing Treatment">Keratin Smoothing Treatment<br>
+                    </div><br><br>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link text-black" data-toggle="collapse" href="#collapseHairdresser">Click here to select a hairdresser</a>
+                </div>
+                <div id="collapseHairdresser" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="category">Please select a hairdresser</p>
+                        <div class="form-group row">
+                            <input class ="center" id="Sebastien" type="radio" name="hairdresser" value="Sebastien"> Sebastien
+                        </div>
+                        <div class="form-group row">
+                            <input class ="center" id="Janette" type="radio" name="hairdresser" value="Janette"> Janette
+                        </div>
+
+                    </div>
+                </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link text-black" data-toggle="collapse" href="#collapseDate">Click here to select a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="category">What date?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <div class="col-10">
+                            <p>Date: <input type="text" id="dateInput"></p><br>
+                                <p style="color: red">Please note that we are closed on Sundays and Mondays.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link text-black" data-toggle="collapse" href="#collapseClientInfo">Click here to fill out your contact information</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p class="category">Please provide your information so we can contact you</p>
+                        First Name:   <input id="firstName" type=“text” name=“firstname”><br><br>
+                        Last Name:    <input id="lastName" type=“text” name=“lastname”><br><br>
+                        <p>Phone Number <input id= "phone" value="(242)" type="text" title="We ask for your phone number to be able to reach you in case of cancellations."></p>
+                    </div>
+
+                </div><br><br>
+
+                    <h2 id="Payment"><img src="https://img.icons8.com/color/48/000000/bank-card-back-side.png" alt="logo" style="width:30px;" />PAYMENT</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link text-black" data-toggle="collapse" href="#collapseCreditCard">Click here to enter your credit card information</a>
+                    </div>
+                    <div id="collapseCreditCard" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Credit Card: <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+                        </div>
+
+                    </div>
+                <button id="submitButton" type="button" class="btn btn-dark">Submit Appointment</button>
+            </div>
+        </div><br><br><br><br>
+
+
+
+        <h2>OUR LOCATION</h2>
+        <div class="container-md p-3 my-3 border bg-dark text-white">
+            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container">
+        <div>
+            <p>CALL US AT 242-5588-8555</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
