@@ -1,0 +1,104 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+    font-family: "Brush Script MT", Times, script;
+    text-shadow: 3px 3px 1px black;
+    font-size: 100px;
+    margin-left: 10px;
+
+}
+
+p{
+    margin-left: 10px;
+}
+
+header .row
+{
+    display: flex;
+    align-items: center;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    background-image: url('hairsalon4.jpg');
+    background-size: cover;
+    color: #ffffff;
+    height: 400px;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.serviceDescription{
+    width: 250px;
+    height: 250px;
+}
+
+.nav>li>a{
+    background-color: black !important;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.text-black{
+    color: black;
+
+}
+
+
+
+footer {
+    font-size: 35px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.card-link{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.titles{
+    font-family: "Optima";
+    font-size: 30px;
+}
+.price{
+    font-size: 20px;
+}
+
+.category{
+    font-family: bold;
+    font-size: 20px;
+}
+
+.error {
+    background-color: yellow;
+    color : red;
+}
+
+
+.showInput {
+    background-color: pink;
+}
+
